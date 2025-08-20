@@ -5,19 +5,21 @@ const Blog = ({blog}) => {
     console.log(blog)
     const {author,author_img,cover,posted_date,reading_time,title} = blog
     return (
-        <div>
-            <img src={cover} alt="" />
-            <div>
+    <div className="">
+            <img className="w-[780px] rounded-2xl" src={cover} alt="" />
+        <div className="flex justify-between">
+            <div className="flex gap-4">
+                <img className="w-14" src={author_img} alt="" />
                 <div>
-                <img src={author_img} alt="" />
-                <p>{author}</p>
-                <p>{title}</p>
+                 <p>{author}</p>
+                 <p>{posted_date}</p>
+                </div>
             </div>
             <div>
-                <p>{posted_date}</p>
-            </div>
+                <p>{reading_time} min read</p>
             </div>
         </div>
+    </div>
     );
 };
 

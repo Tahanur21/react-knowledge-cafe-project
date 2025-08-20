@@ -9,11 +9,14 @@ const Blogs = () => {
         .then(data => setBlogs(data))
     },[])
     return (
-        <div className="md:w-2/3">
+        <div className="md:w-2/3 space-y-5">
             <h2 className="text-2xl">Blogs : {blogs.length}</h2>
-            <div>
+            <div className="border-b-gray-400 space-y-4">
                 {
-                    blogs.map(blog => <Blog key={blog.id} blog={blog}></Blog>)
+                    blogs.map(blog => <Blog 
+                        key={blog.id} 
+                        blog={blog}>                            
+                        </Blog>)
                 }
             </div>
         </div>
