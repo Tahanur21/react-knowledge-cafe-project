@@ -1,7 +1,7 @@
 
 const Bookmarks = () => {
     return (
-        <div className="md:w-1/3">
+        <div className="col-span-1 border-2 rounded-2xl p-4">
             <h2>Bookmarks</h2>
         </div>
     );
